@@ -51,25 +51,62 @@
 .formulario {
   grid-row: 3 / 4;
   grid-column: 3 / 6;
-  margin: 20px; }
+  margin: 50px 20px 50px 20px;
+  height: 54vh; }
   .formulario-form {
     width: 100%;
-    height: 500px;
     text-align: left; }
     .formulario-form-peticion {
       padding-bottom: 2px; }
       .formulario-form-peticion-input {
-        width: 400px;
-        height: 50px; }
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+        font-size: 15px;
+        outline: none;
+        border-radius: 4px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        transition: all .3s; }
+        .formulario-form-peticion-input:focus {
+          border-color: #cc2229;
+          box-shadow: 0 0 8px 0 #cc2229; }
     .formulario-form-submit {
-      width: 50px; }
+      padding: 0;
+      width: 70px; }
+      .formulario-form-submit:hover {
+        cursor: pointer; }
+      .formulario-form-submit:focus {
+        box-shadow: none;
+        border-color: black; }
 
 label {
   display: inline-block;
   font-size: 18px;
-  padding-bottom: 20px; }
+  padding: 10px 0px 5px 0px; }
 
 input {
-  width: 300px;
+  font-size: 15px;
+  padding-left: 5px;
+  width: 100%;
   height: 30px;
-  padding: 10px 0px 5px 5px; }
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  transition: all .2s; }
+  input:focus {
+    border-color: #cc2229;
+    box-shadow: 0 0 8px 0 #cc2229; }
+
+.footer {
+  grid-column: 1 / 8;
+  grid-row: 4 / 5;
+  background-color: black;
+  height: 7vh;
+  display: flex;
+  justify-content: none;
+  align-items: center; }
+  .footer-text {
+    padding-left: 10px;
+    color: white; }

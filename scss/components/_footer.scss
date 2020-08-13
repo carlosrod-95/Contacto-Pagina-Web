@@ -1,0 +1,12 @@
+.footer{
+    grid-column: 1 / 8;
+    grid-row: 4 / 5;
+    background-color: color(primary);
+    height: 7vh;
+    @include flexPosition(none, center);
+
+    &-text{
+        padding-left: 10px;
+        color: color(secondary);
+    }
+}
