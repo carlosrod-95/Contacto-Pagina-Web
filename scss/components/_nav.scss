@@ -1,0 +1,32 @@
+.menu{
+    grid-column: 1 / 8;
+    grid-row: 2 / 3;
+    @include flexPosition;
+    background-color: color(tertiary);
+    border: solid;
+    border-color: color(primary);
+    border-width: 1px;
+
+    &-list{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 50vw;
+        @include flexPosition(space-around,none);
+    }
+
+    &-list-item{
+        
+        display: inline;
+
+        &-link{
+            font-family: 'Permanent Marker', cursive;
+            text-decoration: none;
+            font-size: size(md);
+            color: color(secondary);
+
+            &:hover{
+                color: color(primary);
+            }
+        }
+    }
+}
