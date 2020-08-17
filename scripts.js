@@ -36,11 +36,30 @@ terms.addEventListener('change', (e) => {
 
 const validateForm = () => {
      const formValues = Object.values(formIsValid)
-     const valid = formValues.findIndex (value => value == false)
-     if (valid == -1) {
+     const valid = formValues.findIndex (value => value === false)
+     if (valid === -1) {
          form.submit
      }
      else{
          alert('Rellena los campos')
      }
 }
+
+button.addEventListener('click', () => {
+    const data = new FormData(document.getElementById('form'))
+
+    const newPost = {
+        name: data.get('nombre'),
+        email: data.get('email')
+    }
+    
+    fetch('AQUI IRIA A DONDE LO MANDO??', {
+        method: 'POST',
+        body: JSON.stringify(newPost),
+    })
+    .then(res=>res.json())
+    .then(res=>console.log(res))
+})
+
+
+
